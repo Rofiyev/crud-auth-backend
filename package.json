@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
+    "start": "nodemon index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "21.7.3"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +30,7 @@
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "helmet": "^7.1.0",
     "lodash": "^4.17.21",
     "mongoose": "^8.0.0"
   }

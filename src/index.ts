@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
 import mongoose from "mongoose";
+import helmet from "helmet";
 
 import router from "./routers";
 
@@ -18,6 +19,7 @@ app.use(
 
 app.use(compression());
 app.use(cookieParser());
+app.use(helmet());
 app.use(bodyParser.json());
 
 const server = http.createServer(app);
