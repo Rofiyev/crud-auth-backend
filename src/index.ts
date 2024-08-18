@@ -6,6 +6,7 @@ import compression from "compression";
 import cors from "cors";
 import mongoose from "mongoose";
 import helmet from "helmet";
+require("dotenv").config();
 
 import router from "./routers";
 
@@ -29,8 +30,7 @@ server.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}/`);
 });
 
-const MONGO_URL =
-  "mongodb+srv://rofiyevdilshod:LBiypjLEMI2p3j2L@cluster1.dwj1o98.mongodb.net/?retryWrites=true&w=majority";
+const MONGO_URL = process.env.MONGODB_URL;
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL);
